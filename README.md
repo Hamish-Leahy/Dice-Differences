@@ -33,7 +33,7 @@ Ensure the following are installed:
 ## Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/math-game-simulator-suite.git
+   git clone [https://github.com/yourusername/math-game-simulator-suite.git](https://github.com/Hamish-Leahy/Dice-Differences/tree/main)
    cd math-game-simulator-suite
    ```
 2. Install required dependencies:
