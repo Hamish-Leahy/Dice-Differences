@@ -1,60 +1,92 @@
-# Hexagon Game Simulator
+# Math Game Simulator Suite
 
-This repository contains the **Hexagon Game Simulator**, a Python-based simulation game that showcases an automated gameplay experience on a hexagonal grid. The program features a GUI built using Tkinter, where a player moves automatically on a hexagonal board toward a randomly assigned goal. The game visually represents the player's progress on the board and highlights the winning condition.
+This repository contains Python-based simulations for three interactive math games, built to support learning and analysis for a math assessment. The games include **Dice Differences**, **First Down the Mountain**, and **Hexagon Game Simulator**, each featuring a unique gameplay mechanic that reinforces probability and strategic thinking concepts.
 
-## Features
-- **Hexagonal Grid Layout**: The game board is represented as a hexagonal grid, displaying each cell as a labeled box.
-- **Automatic Gameplay**: The player moves automatically toward the goal based on the shortest path.
-- **GUI Display**: Real-time updates to the board show the player's path and current position, making gameplay easy to follow.
-- **Win Notification**: A message box displays when the player reaches the goal.
-- **Customizable Board Size**: The board size can be adjusted by modifying the `board_size` variable.
+## Game Overview
+### 1. Dice Differences
+- **Description**: A game where players use counters to match dice roll differences. The simulation calculates the number of moves required to clear all counters and outputs data for analysis.
+- **Features**:
+  - GUI interface for inputting counter strategies.
+  - Automatic gameplay simulation with visual output.
+  - Results export to an Excel spreadsheet.
+
+### 2. First Down the Mountain
+- **Description**: Players place climbers at positions 2-12, rolling dice to move them down a mountain track. The goal is to see which climber reaches the bottom first.
+- **Features**:
+  - Visual representation of climber progress on a numbered track.
+  - Automated simulation of games with results displayed in the GUI.
+  - Win counts saved to an Excel file for further analysis.
+
+### 3. Hexagon Game Simulator
+- **Description**: A game set on a hexagonal board where a player moves toward a randomly selected goal. The player progresses automatically, displaying their path on the board.
+- **Features**:
+  - Hexagonal board layout in a Tkinter-based GUI.
+  - Automatic gameplay with real-time position updates.
+  - Notification upon reaching the goal.
 
 ## Prerequisites
-Ensure you have the following installed:
+Ensure the following are installed:
 - Python 3.7+
-- Tkinter (included with most Python installations)
-- Pandas (for future data export functionality)
+- Tkinter (standard with most Python installations)
+- Pandas (optional, for data export functionality)
 
 ## Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/hexagon-game-simulator.git
-   cd hexagon-game-simulator
+   git clone https://github.com/yourusername/math-game-simulator-suite.git
+   cd math-game-simulator-suite
    ```
-2. Install required dependencies (optional for Pandas):
+2. Install required dependencies:
    ```bash
    pip install pandas
    ```
 
 ## Usage
-1. Run the `hexagon.py` file to start the game:
+### Dice Differences
+1. Run the `dice_differences.py` file:
+   ```bash
+   python dice_differences.py
+   ```
+2. Enter your counter strategy and number of games to simulate.
+3. View the results in the GUI and save them to an Excel file.
+
+### First Down the Mountain
+1. Run the `first_down_the_mountain.py` file:
+   ```bash
+   python first_down_the_mountain.py
+   ```
+2. Enter the number of games to simulate and watch the climbers progress down the mountain.
+3. Check the results saved in the generated Excel file.
+
+### Hexagon Game Simulator
+1. Run the `hexagon.py` file:
    ```bash
    python hexagon.py
    ```
-2. The game window will open, and the player will begin moving on the hexagonal grid.
-3. Watch the progress as the player moves automatically toward the goal. The board updates dynamically, showing the player's trail and current position.
-4. A message box will notify you when the player reaches the goal.
+2. Observe the player's movement on the hexagonal board toward the goal.
+3. A message box will notify you when the player reaches the goal.
 
-## How It Works
-- **Hexagonal Board Creation**: The board is constructed using Tkinter labels arranged in a staggered grid layout to create a hexagonal shape.
-- **Player Movement**: The player starts at the center of the board and moves step-by-step toward the randomly generated goal. The movement direction is determined to minimize the distance to the goal.
-- **Real-Time Updates**: The game updates the GUI after each move, displaying the player's path (".") and current position ("P").
-- **Win Condition**: The simulation stops, and a message box is shown when the player reaches the goal.
+## Educational Relevance
+These games serve as tools for understanding mathematical concepts such as:
+- **Probability and Chance**: Simulate dice rolls and analyze results.
+- **Strategic Decision-Making**: Choose strategies in Dice Differences to minimize moves.
+- **Pathfinding and Movement**: Observe movement on a hexagonal grid and learn about efficient pathways.
 
 ## Customization
-- **Board Size**: Modify the `board_size` variable in the `HexGameSimulator` class to change the board size.
-- **Move Speed**: Adjust the delay between moves by modifying the `self.root.after()` method's delay value (e.g., 500 ms).
+- **Adjust Game Settings**: Modify variables such as the number of counters, track lengths, and board size in the code.
+- **Move Speed**: Change the delay between moves in the simulation to make gameplay faster or slower.
 
 ## Future Enhancements
-- **Export Results**: Implement data export to track simulation results in a CSV or Excel format.
-- **Custom Starting Positions**: Allow users to set custom starting points for the player.
-- **Obstacle Placement**: Add functionality for placing obstacles on the board to create more complex paths.
+- **Additional Metrics**: Add detailed statistical analysis to each game's results.
+- **Obstacle Placement**: Introduce obstacles in the Hexagon Game Simulator for increased complexity.
+- **Interactive User Input**: Allow users to customize starting positions and goal locations.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributions
-Contributions are welcome! Feel free to submit a pull request or open an issue if you have ideas for improvements or bug fixes.
+Contributions are welcome! Submit a pull request or open an issue if you have ideas for improvements or bug fixes.
 
 ## Contact
-For any questions or feedback, please reach out to [yourname@example.com] or create an issue in this repository.
+For any questions or feedback, reach out to hamish@hamishleahy.com or create an issue in this repository.
+
